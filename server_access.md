@@ -1,4 +1,8 @@
-## Server Login Instructions
+---
+title: Server Login Instructions
+nav_order: 1
+---
+
 Make sure your OS has a working SSH client. Most modern operating systems have one built in. For MacOS, this should just be the `Terminal` app. For Linux distributions, the default terminal app should work. For Windows, use `Windows Terminal`. If your OS doesn't have a built-in SSH client, you can download one such as [PuTTY](https://www.putty.org/). 
 
 Alternatively, you can use Visual Studio code for SSH and file management. See [the instructions below](#visual-studio-code-setup) for setup instructions. See the notes and caveats at the bottom of this page on using VS Code to access the ECE Linux servers. 
