@@ -1,5 +1,6 @@
 ---
 title: Server Login Instructions
+layout: default
 nav_order: 1
 ---
 
