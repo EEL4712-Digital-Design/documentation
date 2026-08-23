@@ -35,7 +35,7 @@ Run Implementation
 Generate Bitstream
 ```
 
-## 1. Start Vivado [You should be using 2025.2.1 (some images were made with an older version)]
+## 1. Start Vivado [You should be using 2025.2.1 (some images were made with an older version of Vivado - we will update them soon)]
 
 Launch **Vivado**.
 
