@@ -258,7 +258,7 @@ Vivado will generate the FPGA programming file.
 Wait until Vivado reports that **bitstream generation completed
 successfully**.
 
-** WARNING: Note that using the SimpleLogic.vhd file there will be an error because we have not specified how the input/output pins will be connected to the input/output pins of the circuit **
+**WARNING:** Generating a bitstream for `SimpleLogic.vhd` will result in an error because the FPGA input/output pins have not yet been assigned to the circuit's input/output signals.
 
 At this point, the design has successfully passed the Vivado flow:
 
