@@ -1,0 +1,88 @@
+// On large screens, keep the navigation against the left edge. The stock
+// layout centers the navigation and content as one unit, which can leave a
+// substantial unused gutter to the left on wide displays.
+@include mq(lg) {
+  .side-bar {
+    width: $nav-width;
+    min-width: $nav-width;
+  }
+
+  .side-bar + .main {
+    margin-left: $nav-width;
+  }
+}
+
+// The JavaScript-generated outline is desktop-only. At smaller widths the
+// article retains the theme's normal single-column layout.
+.page-outline {
+  display: none;
+}
+
+@media (min-width: 78rem) {
+  .main-content-wrap.has-page-outline {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 13rem;
+    column-gap: 2rem;
+    align-items: start;
+  }
+
+  .main-content-wrap.has-page-outline > .breadcrumb-nav,
+  .main-content-wrap.has-page-outline > .main-content {
+    grid-column: 1;
+    min-width: 0;
+  }
+
+  .page-outline {
+    position: sticky;
+    top: calc(#{$header-height} + #{$sp-4});
+    display: block;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    max-height: calc(100vh - #{$header-height} - #{$sp-8});
+    padding-left: $sp-4;
+    overflow-y: auto;
+    border-left: $border $border-color;
+  }
+
+  .page-outline-title {
+    margin-top: 0;
+    margin-bottom: $sp-3;
+    color: $body-heading-color;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .page-outline-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .page-outline-item + .page-outline-item {
+    margin-top: $sp-2;
+  }
+
+  .page-outline-item-level-3 {
+    padding-left: $sp-3;
+    font-size: 0.875rem;
+  }
+
+  .page-outline-link {
+    display: block;
+    color: $body-text-color;
+    line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .page-outline-link:hover,
+  .page-outline-link:focus,
+  .page-outline-link.is-active {
+    color: $link-color;
+  }
+
+  .page-outline-link.is-active {
+    font-weight: 600;
+  }
+}

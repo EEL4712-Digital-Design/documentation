@@ -1,8 +1,12 @@
 title: UF Reconfig 1
-description: Documentation site for UF's Reconfigurable Computing Course
+description: Documentation Site for UF's Reconfigurable Computing Course
 theme: just-the-docs
 
 url: https://eel5721-reconfigurable-computing.github.io
 
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+sass:
+  quiet_deps: true
+  silence_deprecations:
+    - import
+    - global-builtin
+    - color-functions
