@@ -35,7 +35,7 @@ Run Implementation
 Generate Bitstream
 ```
 
-## 1. Start Vivado
+## 1. Start Vivado [You should be using 2025.2.1 (some images were made with an older version)]
 
 Launch **Vivado**.
 
@@ -145,7 +145,7 @@ The files should now appear in the **Sources** window.
 ## 6. Set the Top-Level Entity
 
 Vivado must know which VHDL entity represents the top level of the FPGA
-design.
+design. (If you only have one file, Vivado may infer this step automatically.)
 
 In the **Sources** window:
 
@@ -164,7 +164,7 @@ top_level
 > **Important:** Make sure that the correct entity is selected as the
 > top level before running synthesis.
 
-## 7. Add the XDC Constraint File
+## 7. Add the XDC Constraint File [You don't need this for the first couple of labs]
 
 Vivado uses an **XDC (Xilinx Design Constraints)** file to specify
 design constraints, including physical pin assignments, I/O standards,
@@ -257,6 +257,8 @@ Vivado will generate the FPGA programming file.
 
 Wait until Vivado reports that **bitstream generation completed
 successfully**.
+
+** WARNING: Note that using the SimpleLogic.vhd file there will be an error because we have not specified how the input/output pins will be connected to the input/output pins of the circuit **
 
 At this point, the design has successfully passed the Vivado flow:
 
