@@ -107,7 +107,7 @@ included.
 
     > Simulate the **testbench**, not the design entity directly.
 
-4.  Click **Optimization Options...**
+4.  **BEFORE** clicking "OK", click **Optimization Options...**
 5.  Select **Apply full visibility to all modules (full debug mode)**.
 6.  Click **OK**, and then **OK** again to start the simulation.
 
