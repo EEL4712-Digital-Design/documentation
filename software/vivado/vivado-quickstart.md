@@ -370,5 +370,6 @@ There are utilization reports for synthesized and implementation.
 
 Post-synthesis report: based on generated netlist.
 
-Post-implementation report: literally what got placed and routed. If vivado optimizes something into or out of your design, it will be reflected here.
+Post-implementation report: literally what got placed and routed.
+If vivado optimizes something into or out of your design, it will be reflected here.
 ```
