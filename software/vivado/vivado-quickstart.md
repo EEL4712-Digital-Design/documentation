@@ -347,8 +347,28 @@ run implementation
 
 ## how to view schematic
 
-TODO
+You can view a schematic of your design:
+
+Tools > schematic
+
+![vivado schematic view](images/vivado_schematic_view.png)
+
+```
+You can't view the schematic until you have run implementation.
+```
 
 ## how to view resource usage
 
-TODO
+You can view the resource utilization of your design:
+
+open synthesized/implemented design -> Report Ultilization -> ok
+
+![vivado resource utilization view](images/vivado_report_util.png)
+
+```
+There are utilization reports for synthesized and implementation.
+
+Post-synthesis report: based on generated netlist.
+
+Post-implementation report: literally what got placed and routed. If vivado optimizes something into or out of your design, it will be reflected here.
+```
