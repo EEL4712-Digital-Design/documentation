@@ -35,7 +35,7 @@ Run Implementation
 Generate Bitstream
 ```
 
-## 1. Start Vivado [You should be using 2025.2.1 (some images were made with an older version of Vivado - we will update them soon)]
+## 1. Start Vivado [You should be using 2025.2.1]
 
 Launch **Vivado**.
 
@@ -86,15 +86,20 @@ Select:
 
 **RTL Project**
 
+![Vivado project type selector](images/vivado_rtl_project.png)
+
+Click **Next**.
+
 For this tutorial, select:
 
 **Do not specify sources at this time**
 
 Click **Next**.
 
-```{=html}
-<!-- Insert image showing the RTL Project selection. -->
-```
+**Do not specify constraints at this time**
+
+Click **Next**.
+
 
 ## 4. Select the Kria KV260 Board
 
@@ -159,7 +164,8 @@ For example:
 top_level
 ```
 
-<!-- Insert image showing Set as Top. -->
+![vivado set source as top level](images/vivado_set_as_top.png)
+
 
 > **Important:** Make sure that the correct entity is selected as the
 > top level before running synthesis.
@@ -200,9 +206,7 @@ In the **Flow Navigator**, under **Synthesis**, click:
 
 **Run Synthesis**
 
-```{=html}
-<!-- Insert image showing Run Synthesis. -->
-```
+![vivado run synthesis menu](images/vivado_synth.png)
 
 Vivado will synthesize the VHDL design into FPGA hardware resources.
 
@@ -229,9 +233,7 @@ In the **Flow Navigator**, under **Implementation**, click:
 
 **Run Implementation**
 
-```{=html}
-<!-- Insert image showing Run Implementation. -->
-```
+![vivado run implementation menu](images/vivado_run_implementation.png)
 
 Vivado will map the synthesized design onto the target FPGA and perform
 placement and routing.
@@ -249,9 +251,7 @@ After implementation completes successfully, click:
 
 under **Program and Debug** in the Flow Navigator.
 
-```{=html}
-<!-- Insert image showing Generate Bitstream. -->
-```
+![vivado generate bitstream menu](images/vivado_generate_bitstream.png)
 
 Vivado will generate the FPGA programming file.
 
@@ -343,3 +343,12 @@ A design that simulates correctly in QuestaSim is not necessarily
 synthesizable or implementable on the FPGA. Therefore, successful
 **bitstream generation in Vivado** provides the final implementation
 check before the design is used on the course FPGA server.
+run implementation
+
+## how to view schematic
+
+TODO
+
+## how to view resource usage
+
+TODO
