@@ -1,5 +1,5 @@
 ---
-title: Vivado Installation
+title: Installation
 layout: default
 parent: Vivado
 nav_order: 2

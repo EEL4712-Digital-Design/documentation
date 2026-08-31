@@ -1,5 +1,5 @@
 ---
-title: Vivado Quickstart
+title: Quickstart
 layout: default
 parent: Vivado
 grand_parent: Software

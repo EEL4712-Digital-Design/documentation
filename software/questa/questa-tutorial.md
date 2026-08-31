@@ -1,5 +1,5 @@
 ---
-title: Simulation Using QuestaSim
+title: Simulation
 layout: default
 parent: QuestaSim
 grand_parent: Software

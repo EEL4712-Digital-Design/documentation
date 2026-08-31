@@ -1,5 +1,5 @@
 ---
-title: QuestaSim Installation
+title: Installation
 layout: default
 parent: QuestaSim
 grand_parent: Software
