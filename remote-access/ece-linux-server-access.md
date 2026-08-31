@@ -150,7 +150,7 @@ After connecting to the Linux desktop, open a terminal:
 Before launching the course software, configure your environment by running:
 
 ```bash
-source /apps/reconfig/enable_pro
+source /apps/reconfig/enable
 ```
 
 This configures access to the engineering software used in the course.
@@ -180,12 +180,12 @@ The `&` runs the application in the background so that you can continue using th
 > **Important:** You must run
 >
 > ```bash
-> source /apps/reconfig/enable_pro
+> source /apps/reconfig/enable
 > ```
 >
 > in each new terminal session before using these tools.
 
-## Quartus Standard
+<!-- ## Quartus Standard
 
 If you specifically need Quartus Standard rather than Quartus Prime Pro, use:
 
@@ -193,7 +193,7 @@ If you specifically need Quartus Standard rather than Quartus Prime Pro, use:
 source /apps/reconfig/enable_std
 ```
 
-instead.
+instead. -->
 
 ---
 
@@ -228,11 +228,11 @@ Once connected, you can open folders on the ECE server and open a remote termina
 Terminal → New Terminal
 ```
 
-## VS Code Compatibility Note
+<!-- ## VS Code Compatibility Note
 
 The ECE Linux servers currently run an older Linux environment. Recent versions of VS Code may no longer support connecting to these systems.
 
-If Remote-SSH fails because the remote operating system is unsupported, an older VS Code release may be required. VS Code version **1.98** has previously worked with the ECE Linux servers, although it may display warnings about the older operating system.
+If Remote-SSH fails because the remote operating system is unsupported, an older VS Code release may be required. VS Code version **1.98** has previously worked with the ECE Linux servers, although it may display warnings about the older operating system. -->
 
 ---
 
@@ -247,7 +247,7 @@ ssh <ufl_username>@linux.ece.ufl.edu
 ### Configure course tools
 
 ```bash
-source /apps/reconfig/enable_pro
+source /apps/reconfig/enable
 ```
 
 ### Start QuestaSim
