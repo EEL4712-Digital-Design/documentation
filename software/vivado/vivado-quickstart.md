@@ -204,7 +204,7 @@ window.
 
 Before running synthesis, you can view a gate-level schematic of your design.
 
-Under the RTL Analysis tab, click Open Elaborated Design, then click Schematic.
+Under the **RTL Analysis tab**, click **Open Elaborated Design**, then click **Schematic**.
 
 ![vivado schematic view pre-synthesis](images/linter_schematic.png)
 
