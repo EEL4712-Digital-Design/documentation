@@ -87,6 +87,9 @@ bitstream is generated. You will have to submit the `.bin` file to the course's 
     ![Add the Zynq UltraScale+ MPSoC IP](images/vivado-add-zynq.png)
 
 7. Select **Run Block Automation**.
+
+    ![Run block automation](images/vivado-run-block-automation.png)
+
 8. Leave **Apply Board Preset** selected and accept any remaining defaults.
 9. Select **OK**.
 
@@ -94,12 +97,17 @@ bitstream is generated. You will have to submit the `.bin` file to the course's 
 
 The board preset configures the processing system for the KV260 hardware.
 
+10. Double-click the **Zynq UltraScale+ MPSoC** block.
+11. In the **Page Navigator**, select **PS-PL Configuration**.
+12. Expand **PS-PL Interfaces**, then expand **Master Interface**.
+13. Clear **AXI HPM1 FPD**. Leave **AXI HPM0 FPD** selected.
+14. Select **OK**.
+
+    ![Disable the unused AXI HPM1 FPD master interface](images/vivado-disable-hpm1.png)
+
 ## Base project complete
 
-At this point, the base project is complete. The next design-specific step is to add the
-lab's AXI slave IP to the `design_1` block design. Connection automation, address assignment,
-block-design validation, HDL-wrapper creation, and bitstream generation happen
-after that slave IP has been added.
+At this point, the base project is complete. The next design-specific step is to add or
+create (depending on the lab) an AXI slave IP within the `design_1` block design.
 
-Instructions for adding AXI slave IP in the form of custom accelerators will be
-provided starting with Lab 2.
+Instructions for adding an AXI slave IP to the block design can be found here: [Create and connect an AXI peripheral]({% link software/vivado/vivado-axi-peripheral.md %})
