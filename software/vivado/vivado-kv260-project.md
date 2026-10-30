@@ -46,14 +46,21 @@ The required version of Vivado is **2025.2.1**.
 
 ## 2. Configure project settings
 
-### Set project language as VHDL
+### Set project and simulator languages
 
 1. In the **Flow Navigator**, under **Project Manager**, select **Settings**.
 2. Select **General** in the left pane.
 3. Set **Target language** to **VHDL**.
-4. Select **Apply**.
+4. Select **Simulation** in the left pane.
+5. Set **Simulator language** to **Mixed**.
+6. Select **Apply**.
 
     ![Set the Vivado target language to VHDL](images/vivado-target-language.png)
+
+Set both options before creating or editing IP. New IP-editing projects inherit
+these settings from the base project. For an IP-editing project that is already
+open, set **General > Target language** to **VHDL** and
+**Simulation > Simulator language** to **Mixed** there as well.
 
 ### Enable `.bin` bitstream output type
 

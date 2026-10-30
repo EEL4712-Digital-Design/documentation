@@ -10,6 +10,11 @@ nav_order: 4
 
 This guide starts with a completed [base KV260 Vivado project]({% link software/vivado/vivado-kv260-project.md %}) and outlines how to package, connect, and build a simple AXI4-Lite peripheral.
 
+Before creating the peripheral, configure the base project with
+**Settings > General > Target language = VHDL** and
+**Settings > Simulation > Simulator language = Mixed**. The new IP-editing
+project inherits these settings.
+
 ## 1. Create the AXI peripheral
 
 1. Open the base project's `design_1` block design.
