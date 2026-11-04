@@ -2,7 +2,7 @@
 title: Installation
 layout: default
 parent: Vivado
-nav_order: 2
+nav_order: 1
 ---
 
 1. Navigate to the [AMD Vivado 2025.2 downloads page](https://www.amd.com/en/support/downloads/adaptive-socs-and-fpgas/development-tools/2025-2.html).

@@ -10,12 +10,13 @@ This site contains course documentation for EEL5721 Reconfigurable Computing at 
 
 ## Initial Setup
 
-This course uses Siemens QuestaSim for simulation and AMD Vivado for synthesis, implementation, bitstream generation, etc. If your personal computer is compatible with these tools, e.g., Windows/Linux with enough storage space and RAM, then we recommend installing them locally to make the development process faster. 
+This course uses Siemens QuestaSim for simulation, AMD Vivado for synthesis, implementation, and bitstream generation, and AMD Vitis for high-level synthesis (HLS). If your personal computer is compatible with these tools, e.g., Windows/Linux with enough storage space and RAM, then we recommend installing them locally to make the development process faster.
 
-If you would like to install the tools locally, you can follow these two guides to get them installed:
+If you would like to install the tools locally, follow these guides:
 
 - [Install Siemens QuestaSim]({% link software/questa/questa-installation.md %}) 
 - [Install AMD Vivado]({% link software/vivado/vivado-installation.md %})
+- [Set up AMD Vitis HLS]({% link software/vitis/vitis-installation.md %})
 
 If, on the other hand, you cannot install the tools locally due to insufficient hardware specifications, the department also manages its own Linux servers that students can access remotely. Here are instructions for accessing them:
 - [Access the UF ECE Linux servers]({% link remote-access/ece-linux-server-access.md %})
@@ -25,5 +26,6 @@ If, on the other hand, you cannot install the tools locally due to insufficient 
 
 - [Simulate VHDL designs using QuestaSim]({% link software/questa/questa-tutorial.md %})
 - [Generate a KV260 bitstream using Vivado]({% link software/vivado/vivado-quickstart.md %})
+- [Explore high-level synthesis using Vitis]({% link software/vitis/vitis-tutorial.md %})
 - [Review project setup and workflow best practices]({% link best-practices/best-practices.md %})
 - [Learn Git and GitHub basics]({% link git-and-github/git-and-github.md %})
