@@ -1,8 +1,8 @@
-title: UF Reconfig 1
-description: Documentation Site for UF's Reconfigurable Computing Course
+title: UF Digital Design
+description: Documentation Site for UF's Digital Design Course
 theme: just-the-docs
 
-url: https://eel5721-reconfigurable-computing.github.io
+url: https://eel4712-digital-design.github.io
 
 sass:
   quiet_deps: true
