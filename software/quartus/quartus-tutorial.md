@@ -52,6 +52,10 @@ Open **Assignments → Pin Planner** after the first compile. The upper pane sho
 - **Location** is the physical FPGA package pin to enter. **Fitter Location** reports the pin Quartus used during compilation. Enter your assignment in **Location**.
 - **I/O Standard** is the electrical signaling standard specified by the board manual.
 
+![Pin Planner close-up showing the Node Name, Direction, and Location columns for two highlighted push-button inputs](images/pin-planner.png)
+
+*The highlighted push-button rows show how to read the table. For Lab 0, find the `sw` and `leds` nodes listed below.*
+
 Enter the SW0 assignment below, then look up the remaining locations.
 
 | Board signal | Node Name | Location | I/O Standard |
