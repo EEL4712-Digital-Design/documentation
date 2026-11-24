@@ -1,9 +1,9 @@
 ---
-title: Best Practices and Recommendations
+title: Recommended Workflow
 layout: default
 nav_order: 5
 ---
-# Best Practices and Recommendations
+# Recommended Workflow
 
 This section summarizes the recommended workflow and setup for working with **QuestaSim** and **Quartus**.
 

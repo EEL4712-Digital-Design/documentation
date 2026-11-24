@@ -15,7 +15,8 @@ This site contains course documentation for EEL 4712 Digital Design at the Unive
 
 ## Software Usage
 
-- [Simulate SystemVerilog designs using QuestaSim]({% link software/questa/questa-tutorial.md %})
-- [Compile a Quartus project and program the DE10-Lite]({% link software/quartus/quartus-tutorial.md %})
-- [Review project setup and workflow best practices]({% link best-practices/best-practices.md %})
+1. Read the [Recommended Workflow]({% link best-practices/best-practices.md %}).
+2. [Simulate SystemVerilog designs using QuestaSim]({% link software/questa/questa-tutorial.md %}).
+3. [Compile a Quartus project and program the DE10-Lite]({% link software/quartus/quartus-tutorial.md %}).
+
 - [Learn Git and GitHub basics]({% link git-and-github/git-and-github.md %})
