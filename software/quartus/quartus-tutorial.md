@@ -92,8 +92,15 @@ After entering the assignments, recompile before programming so Quartus fits the
 
 ## Program the DE10-Lite
 
-1. Go to **Assignments → Device → Device and Pin Options → Unused Pins** and select **As input tri-stated**. After checking the pin assignments, run **Processing → Start Compilation** again so the programming file includes the final assignments and settings.
-2. Power the DE10-Lite and connect its USB-Blaster port to your computer. Open **Tools → Programmer** in Quartus.
+1. Verify all five Lab 0 pin assignments in Pin Planner. Go to **Assignments → Device → Device and Pin Options → Unused Pins**, select **As input tri-stated**, and click **OK**. Run **Processing → Start Compilation** again so `Lab0.sof` includes the final pin assignments and unused-pin setting.
+2. Power the DE10-Lite and connect its USB-Blaster port to your computer. If the board is running the factory diagnostic, its seven-segment displays count repeatedly from `0` through `F`. If a board expected to run the factory diagnostic does not show this pattern, ask your TA before programming.
+
+   Open **Tools → Programmer** in Quartus. You can also click the **Programmer** toolbar icon or select **Program Device (Open Programmer)** in the Tasks pane.
+
+   ![Quartus showing three ways to open Programmer from the Tools menu, toolbar, and Tasks pane](images/open-programmer.png)
+
+   <p><strong style="color: #c62828;">Image needs updating for Lab 0. The Project Navigator shows VHDL modules. Recapture the Programmer controls with the SystemVerilog project.</strong></p>
+
 3. Click **Hardware Setup**, select **USB-Blaster [USB-x]**, and use **JTAG** mode. If USB-Blaster is missing, check the USB connection and install the driver from the Quartus installation directory. [Altera USB-Blaster driver instructions](https://docs.altera.com/r/docs/683076/current/altera-fpga-download-cable-user-guide/installing-the-altera-fpga-download-cable-driver-on-windows)
 4. Use `output_files/Lab0.sof` for volatile JTAG programming. If the file is missing from the list, click **Add File** and select it. Check **Program/Configure**, click **Start**, and wait for progress to reach **100%**. A `.pof` targets nonvolatile configuration memory and can replace the factory design.
 5. Test the design using the [expected values from the QuestaSim tutorial]({% link software/questa/questa-tutorial.md %}#understanding-the-testbench). Start with SW0–SW3 down, then raise SW0, SW1, SW2, and SW3 in order, leaving each switch up. LEDR0 should be on, off, on, off, then on.
