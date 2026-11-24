@@ -39,7 +39,20 @@ Select **Processing → Start Compilation**. Review **Compilation Report → Flo
 
 ## Assign the board pins
 
-Open **Assignments → Pin Planner** after the first compile. Enter the example assignment for SW0 below. **Node Name** is the port from `top_level.sv`, **Location** is the FPGA package pin, and **I/O Standard** is the electrical standard.
+Quartus can route a design’s inputs and outputs to many FPGA pins. On the DE10-Lite, the board’s wiring determines which physical pin connects to each switch or LED. Pin Planner tells Quartus which of those physical pins to connect to each port in your design. For example, routing `sw[0]` to SW0 lets that switch drive input `A` through `top_level.sv`.
+
+Open **Assignments → Pin Planner** after the first compile. The upper pane shows the FPGA package, and the lower pane lists the pins and design nodes. Drag the divider upward to make more room for the table.
+
+![Quartus Pin Planner showing the FPGA package above the pin assignment table, with an arrow pointing to the divider](images/pin-planner-overview.png)
+
+*The Spring 2026 handout screenshot shows the Pin Planner layout using a project with more board signals. Use the node names from your Lab 0 project.*
+
+- **Node Name** is the port name or bus bit from `top_level.sv`. Match its spelling, case, and index exactly so Quartus applies the assignment to the intended signal.
+- **Direction** comes from the SystemVerilog port declaration. The `sw` bits are inputs and `leds[0]` is an output.
+- **Location** is the physical FPGA package pin to enter. **Fitter Location** reports the pin Quartus used during compilation. Enter your assignment in **Location**.
+- **I/O Standard** is the electrical signaling standard specified by the board manual.
+
+Enter the SW0 assignment below, then look up the remaining locations.
 
 | Board signal | Node Name | Location | I/O Standard |
 | --- | --- | --- | --- |
@@ -50,6 +63,8 @@ Open **Assignments → Pin Planner** after the first compile. Enter the example 
 | LEDR0 | `leds[0]` | Look up in documentation | 3.3-V LVTTL |
 
 Look up the missing **Location** values in the copy of the [Terasic DE10-Lite User Manual](https://github.com/EEL4712-Digital-Design/lab0-main/blob/main/DE10-Lite_User_Manual.pdf) included with Lab 0. Use Table 3-4 on printed page 26 for the switches and Table 3-5 on printed page 27 for the LED. Enter each FPGA pin in the **Location** field for its corresponding node.
+
+After entering the assignments, recompile before programming so Quartus fits the design to the selected pins. After compilation, verify that **Fitter Location** matches **Location** for all five nodes.
 
 ### Reuse pin assignments in another lab
 
