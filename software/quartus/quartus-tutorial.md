@@ -86,6 +86,10 @@ After entering the assignments, recompile before programming so Quartus fits the
 
 ![Quartus Tcl Scripts dialog with the Add to Project and Run controls](images/tcl-scripts.png)
 
+![Quartus confirmation dialog reporting that the Tcl script executed](images/tcl-script-executed.png)
+
+*After Quartus confirms that your script ran, check the imported assignments in Pin Planner.*
+
 ## Program the DE10-Lite
 
 1. Go to **Assignments → Device → Device and Pin Options → Unused Pins** and select **As input tri-stated**. After checking the pin assignments, run **Processing → Start Compilation** again so the programming file includes the final assignments and settings.
