@@ -1,11 +1,11 @@
 ---
-title: Simulation
+title: SystemVerilog Simulation
 layout: default
 parent: QuestaSim
 grand_parent: Software
 nav_order: 2
 ---
-# Simulation Using QuestaSim
+# SystemVerilog Simulation Using QuestaSim
 
 This guide summarizes the recommended workflow for creating a QuestaSim
 project, adding SystemVerilog design and testbench files, compiling the project,
