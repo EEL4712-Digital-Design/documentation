@@ -37,6 +37,10 @@ For an existing project, open **Assignments → Settings → EDA Tool Settings �
 
 Select **Processing → Start Compilation**. Review **Compilation Report → Flow Summary** and the Messages pane. Resolve errors and investigate warnings about the top-level entity, pin assignments, or electrical settings before programming.
 
+![Quartus window highlighting the Processing menu and the Compile Design task](images/compile-design.png)
+
+<p><strong style="color: #c62828;">Image needs updating for Lab 0. The Files pane shows the old VHDL project. The current project uses SimpleLogic.sv and top_level.sv.</strong></p>
+
 ## Assign the board pins
 
 Quartus can route a design’s inputs and outputs to many FPGA pins. On the DE10-Lite, the board’s wiring determines which physical pin connects to each switch or LED. Pin Planner tells Quartus which of those physical pins to connect to each port in your design. For example, routing `sw[0]` to SW0 lets that switch drive input `A` through `top_level.sv`.
@@ -75,6 +79,10 @@ After entering the assignments, recompile before programming so Quartus fits the
 1. In **Pin Planner**, select **File → Export** and save the assignments as `pin_assignments.tcl` in a folder shared by your lab projects.
 2. In the new Quartus project, open **Tools → Tcl Scripts → Add to Project** and select the saved script.
 3. Select the script and click **Run**. Open **Pin Planner** to verify that the imported assignments match the active top-level ports. A name mismatch can leave a port without its intended pin.
+
+![Quartus Tools menu with Tcl Scripts highlighted](images/tools-tcl-scripts.png)
+
+<p><strong style="color: #c62828;">Image needs updating for Lab 0. The editor behind the Tools menu shows VHDL. Use a SystemVerilog project when recapturing the menu.</strong></p>
 
 ![Quartus Tcl Scripts dialog with the Add to Project and Run controls](images/tcl-scripts.png)
 
