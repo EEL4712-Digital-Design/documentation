@@ -55,6 +55,8 @@ For Lab 0, use an editor extension that supports SystemVerilog. For VHDL project
 <!-- Insert image from the tutorial showing the Modern VHDL extension here. -->
 ![Modern VHDL extension](images/modern_vhdl.png)
 
+<p><strong style="color: #c62828;">Image needs updating for Lab 0. Show a VS Code extension with SystemVerilog support.</strong></p>
+
 ### vscode-pdf
 
 The **vscode-pdf** extension allows PDF documents to be viewed directly inside VS Code. This can be useful for keeping lab instructions, reference sheets, and source code open within the same application.
@@ -66,6 +68,8 @@ For example, VS Code can be arranged so that the VHDL design file, testbench, la
 
 <!-- Insert image from the tutorial showing the example VS Code workspace here. -->
 ![Example VS Code workspace](images/vscode_workspace.png)
+
+<p><strong style="color: #c62828;">Image needs updating for Lab 0. Show the SystemVerilog design and testbench alongside the current lab instructions.</strong></p>
 
 ## GitHub Copilot
 

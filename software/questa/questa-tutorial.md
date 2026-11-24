@@ -27,6 +27,8 @@ and running a functional simulation.
 
 ![Creating a QuestaSim project](images/questa_create_project.png)
 
+<p><strong style="color: #c62828;">Image needs updating for Lab 0. The Project Location field shows the old VHDL lab folder. Show the current SystemVerilog lab folder.</strong></p>
+
 After creating the project, the **Add items to the Project** window will
 appear.
 
