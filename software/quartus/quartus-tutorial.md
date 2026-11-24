@@ -26,17 +26,13 @@ Select **Processing → Start Compilation**. Review **Compilation Report → Flo
 
 ## Assign the board pins
 
-Open **Assignments → Pin Planner** after the first compile. Enter the five Lab 0 assignments below. The **Node Name** column lists the ports from `top_level.sv`. Use **Location** for the FPGA package pin and **I/O Standard** for the electrical standard.
+Open **Assignments → Pin Planner** after the first compile. Enter the example assignment for SW0 below. **Node Name** is the port from `top_level.sv`, **Location** is the FPGA package pin, and **I/O Standard** is the electrical standard.
 
 | Board signal | Node Name | Location | I/O Standard |
 | --- | --- | --- | --- |
 | SW0 | `sw[0]` | `PIN_C10` | 3.3-V LVTTL |
-| SW1 | `sw[1]` | `PIN_C11` | 3.3-V LVTTL |
-| SW2 | `sw[2]` | `PIN_D12` | 3.3-V LVTTL |
-| SW3 | `sw[3]` | `PIN_C12` | 3.3-V LVTTL |
-| LEDR0 | `leds[0]` | `PIN_A8` | 3.3-V LVTTL |
 
-The DE10-Lite user manual lists the board pin assignments. [Terasic DE10-Lite User Manual, tables 3-4 and 3-5](https://www.mouser.com/datasheet/2/598/DE10_Lite_User_Manual-1100361.pdf)
+Look up the **Location** and **I/O Standard** for SW1, SW2, SW3, and LEDR0 in the copy of the [Terasic DE10-Lite User Manual](https://github.com/EEL4712-Digital-Design/lab0-main/blob/main/DE10-Lite_User_Manual.pdf) included with Lab 0. Use Table 3-4 on printed page 26 for the switches and Table 3-5 on printed page 27 for the LED. Enter those assignments for `sw[1]`, `sw[2]`, `sw[3]`, and `leds[0]`, respectively.
 
 ### Reuse pin assignments in another lab
 
