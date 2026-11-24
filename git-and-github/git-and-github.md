@@ -1,7 +1,7 @@
 ---
 title: Git and GitHub Tutorial
 layout: default
-nav_order: 6
+nav_order: 2
 ---
 
 # Git and GitHub Tutorial

@@ -1,7 +1,7 @@
 ---
 title: ECE Linux Server Access
 layout: default
-nav_order: 2
+nav_order: 3
 ---
 # ECE Linux Server Access
 
