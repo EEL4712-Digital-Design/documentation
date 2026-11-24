@@ -9,7 +9,7 @@ This section summarizes the recommended workflow and setup for working with **Qu
 
 ## File Structure
 
-Quartus and Questa may not function correctly if the file path contains spaces or special characters. To avoid problems, use only **letters, numbers, and underscores** in directory and file names.
+<p><mark style="background-color: #ff0; color: #000;"><strong>Do not use spaces anywhere in the full project path for Quartus or QuestaSim. Check every folder from the drive root on Windows or the filesystem root on Linux through the project folder. Use only letters, numbers, and underscores in folder names.</strong></mark></p>
 
 A simple directory structure is recommended. For example:
 

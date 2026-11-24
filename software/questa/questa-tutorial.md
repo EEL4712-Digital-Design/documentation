@@ -13,6 +13,8 @@ and running a functional simulation.
 
 ## Creating a Project in QuestaSim
 
+<p><mark style="background-color: #ff0; color: #000;"><strong>Do not use spaces anywhere in the full QuestaSim project path. This includes every parent folder and the project folder itself. Use only letters, numbers, and underscores in folder names.</strong></mark></p>
+
 1.  Start **QuestaSim**.
 2.  Select **File → New → Project**.
 3.  Enter a project name, for example `SimpleLogic`.
@@ -20,10 +22,6 @@ and running a functional simulation.
     lab/project files.
 5.  Leave the remaining settings at their default values and click
     **OK**.
-
-> **Important:** Avoid spaces and special characters in project paths
-> and file names. Use letters, numbers, and underscores.
-
 
 ![Creating a QuestaSim project](images/questa_create_project.png)
 
