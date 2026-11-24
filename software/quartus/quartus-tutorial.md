@@ -18,9 +18,20 @@ In Lab 0, you will compile a SystemVerilog design, assign its signals to pins on
 2. Open Quartus Prime Lite and select **File → New Project Wizard**. Use the lab folder as the working directory, `Lab0` as the project name, and `top_level` as the top-level entity.
 3. Select **Empty project**. On **Add Files**, add both SystemVerilog files. To add them later, use **Project → Add/Remove Files in Project**. If needed, right-click `top_level.sv` in the **Files** tab of the Project Navigator and choose **Set as Top-Level Entity**.
 4. On **Family, Device & Board Settings**, open the **Board** tab, select **MAX 10 DE10 - Lite**, and clear **Create top-level design file**. The supplied wrapper connects the design to the board's switches and LEDs.
-5. Run the functional simulation separately in Questa. Leave the Quartus EDA simulation settings at their defaults, review the summary, and click **Finish**.
 
 ![New Project Wizard board selection for MAX 10 DE10-Lite](images/board-selection.png)
+
+## Set up the EDA simulation tool
+
+1. If Quartus does not know where QuestaSim is installed, [set the simulator executable directory]({% link software/quartus/quartus-installation.md %}#connect-quartus-to-questa).
+2. On the wizard’s **EDA Tool Settings** page, find the **Simulation** row. Select **QuestaSim** for **Tool Name** and **Verilog** for **Format(s)**. This setting controls the Quartus-generated simulation output. Keep your design and testbench files as `.sv`.
+3. Leave **Run gate-level simulation automatically after compilation** unchecked. Click **Next**, review the summary, and click **Finish**. Run the Lab 0 functional simulation separately in QuestaSim.
+
+For an existing project, open **Assignments → Settings → EDA Tool Settings → Simulation** to update the tool and format.
+
+![Quartus New Project Wizard EDA Tool Settings showing the Simulation row](images/eda-simulation-settings.png)
+
+<p><strong style="color: #c62828;">Image needs updating for Lab 0. It shows VHDL in the Format(s) column. Select Verilog for this SystemVerilog lab.</strong></p>
 
 ## Compile the design
 
@@ -33,8 +44,12 @@ Open **Assignments → Pin Planner** after the first compile. Enter the example 
 | Board signal | Node Name | Location | I/O Standard |
 | --- | --- | --- | --- |
 | SW0 | `sw[0]` | `PIN_C10` | 3.3-V LVTTL |
+| SW1 | `sw[1]` | Look up in documentation | 3.3-V LVTTL |
+| SW2 | `sw[2]` | Look up in documentation | 3.3-V LVTTL |
+| SW3 | `sw[3]` | Look up in documentation | 3.3-V LVTTL |
+| LEDR0 | `leds[0]` | Look up in documentation | 3.3-V LVTTL |
 
-Look up the **Location** and **I/O Standard** for SW1, SW2, SW3, and LEDR0 in the copy of the [Terasic DE10-Lite User Manual](https://github.com/EEL4712-Digital-Design/lab0-main/blob/main/DE10-Lite_User_Manual.pdf) included with Lab 0. Use Table 3-4 on printed page 26 for the switches and Table 3-5 on printed page 27 for the LED. Enter those assignments for `sw[1]`, `sw[2]`, `sw[3]`, and `leds[0]`, respectively.
+Look up the missing **Location** values in the copy of the [Terasic DE10-Lite User Manual](https://github.com/EEL4712-Digital-Design/lab0-main/blob/main/DE10-Lite_User_Manual.pdf) included with Lab 0. Use Table 3-4 on printed page 26 for the switches and Table 3-5 on printed page 27 for the LED. Enter each FPGA pin in the **Location** field for its corresponding node.
 
 ### Reuse pin assignments in another lab
 
