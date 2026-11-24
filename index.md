@@ -4,28 +4,18 @@ layout: home
 nav_order: 1
 ---
 
-# EEL5721 Reconfigurable Computing
+# EEL 4712 Digital Design
 
-This site contains course documentation for EEL5721 Reconfigurable Computing at the University of Florida. There are guides to help with installation/configuration of the required software, tutorials for simulation, FPGA development, and source control (using Git).
+This site contains course documentation for EEL 4712 Digital Design at the University of Florida. Use QuestaSim to simulate VHDL designs and Quartus Prime Lite to compile designs and program the DE10-Lite FPGA board.
 
 ## Initial Setup
 
-This course uses Siemens QuestaSim for simulation, AMD Vivado for synthesis, implementation, and bitstream generation, and AMD Vitis for high-level synthesis (HLS). If your personal computer is compatible with these tools, e.g., Windows/Linux with enough storage space and RAM, then we recommend installing them locally to make the development process faster.
-
-If you would like to install the tools locally, follow these guides:
-
-- [Install Siemens QuestaSim]({% link software/questa/questa-installation.md %}) 
-- [Install AMD Vivado]({% link software/vivado/vivado-installation.md %})
-- [Set up AMD Vitis HLS]({% link software/vitis/vitis-installation.md %})
-
-If, on the other hand, you cannot install the tools locally due to insufficient hardware specifications, the department also manages its own Linux servers that students can access remotely. Here are instructions for accessing them:
+- [Install Quartus Prime Lite and Questa FPGA Starter Edition]({% link software/quartus/quartus-installation.md %})
 - [Access the UF ECE Linux servers]({% link remote-access/ece-linux-server-access.md %})
-
 
 ## Software Usage
 
 - [Simulate VHDL designs using QuestaSim]({% link software/questa/questa-tutorial.md %})
-- [Generate a KV260 bitstream using Vivado]({% link software/vivado/vivado-quickstart.md %})
-- [Explore high-level synthesis using Vitis]({% link software/vitis/vitis-tutorial.md %})
+- [Compile a Quartus project and program the DE10-Lite]({% link software/quartus/quartus-tutorial.md %})
 - [Review project setup and workflow best practices]({% link best-practices/best-practices.md %})
 - [Learn Git and GitHub basics]({% link git-and-github/git-and-github.md %})

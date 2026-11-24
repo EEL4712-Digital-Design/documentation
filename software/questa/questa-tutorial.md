@@ -8,7 +8,7 @@ nav_order: 2
 # Simulation Using QuestaSim
 
 This guide summarizes the recommended workflow for creating a QuestaSim
-project, adding VHDL design and testbench files, compiling the project,
+project, adding SystemVerilog design and testbench files, compiling the project,
 and running a functional simulation.
 
 ## Creating a Project in QuestaSim
@@ -32,20 +32,20 @@ appear.
 
 ### Add the Design File
 
-Download [`SimpleLogic.vhd`]({% link software/rtl/SimpleLogic.vhd %}) and save it in your project directory.
+Download [`SimpleLogic.sv`]({% link software/rtl/SimpleLogic.sv %}) and save it in your project directory.
 
 1.  Click **Add Existing File**.
-2.  Browse to `SimpleLogic.vhd`.
+2.  Browse to `SimpleLogic.sv`.
 3.  Select the file and add it to the project.
 
 You normally do not need to select **Copy to project directory**.
 
 ### Add the Testbench
 
-Download [`SimpleLogic_tb.vhd`]({% link software/rtl/SimpleLogic_tb.vhd %}), save it in your project directory, and add it in the same way:
+Download [`SimpleLogic_tb.sv`]({% link software/rtl/SimpleLogic_tb.sv %}), save it in your project directory, and add it in the same way:
 
 1.  Click **Add Existing File**.
-2.  Select `SimpleLogic_tb.vhd`.
+2.  Select `SimpleLogic_tb.sv`.
 3.  Click **OK**.
 4.  Click **Close** when all required files have been added.
 
@@ -54,7 +54,7 @@ Download [`SimpleLogic_tb.vhd`]({% link software/rtl/SimpleLogic_tb.vhd %}), sav
 A testbench is used to apply input test signals to the **Unit Under Test
 (UUT)** and observe the resulting outputs.
 
-A typical VHDL testbench must:
+A typical SystemVerilog testbench must:
 
 -   Declare the input and output test signals.
 -   Instantiate the design being tested.
@@ -63,16 +63,24 @@ A typical VHDL testbench must:
 -   Wait between input changes so that the corresponding outputs can be
     observed.
 
-![Annotated VHDL testbench](images/questa_testbench.png)
+The testbench starts with all four inputs low. Each `#10` waits 10 ns before setting the next input high. The final delay lets you see the last output before `$finish` ends the run.
+
+| Time (ns) | ABCD | Expected Z |
+| --- | --- | --- |
+| 0–10 | `0000` | `1` |
+| 10–20 | `1000` | `0` |
+| 20–30 | `1100` | `1` |
+| 30–40 | `1110` | `0` |
+| 40–50 | `1111` | `1` |
 
 For future designs, you may need to create or modify a testbench to
-match the entity being tested. Make sure that the testbench signals are
+match the module being tested. Make sure that the testbench signals are
 mapped to the correct ports and that the stimulus exercises the required
 behavior of the design.
 
 ## Compiling the Project
 
-Before running a simulation, compile the VHDL files.
+Before running a simulation, compile the SystemVerilog files.
 
 1.  Select **Compile → Compile All**.
 2.  QuestaSim will compile the design file and testbench.
@@ -86,7 +94,7 @@ For the tutorial example, a successful compilation reports:
 The status of the compiled files should also change from `?` to a check
 mark.
 
-If compilation fails, inspect the error messages, correct the VHDL
+If compilation fails, inspect the error messages, correct the SystemVerilog
 source, and compile again before attempting to simulate the design.
 
 ## Running a Functional Simulation
@@ -105,7 +113,7 @@ included.
     work → SimpleLogic_tb
     ```
 
-    > Simulate the **testbench**, not the design entity directly.
+    > Simulate the **testbench**, not the design module directly.
 
 4.  **BEFORE** clicking "OK", click **Optimization Options...**
 5.  Select **Apply full visibility to all modules (full debug mode)**.
@@ -142,7 +150,7 @@ The waveform window will display the input and output signals over
 simulation time.
 
 
-![QuestaSim functional simulation waveform](images/questa_waveform.png)
+Choose **Zoom Full** and compare `Z` with the expected values above.
 
 Use the waveform tools to:
 
@@ -156,7 +164,7 @@ Use the waveform tools to:
 For each lab, a useful workflow is:
 
 ``` text
-Write/Edit VHDL
+Write/Edit SystemVerilog
       ↓
 Compile in QuestaSim
       ↓
@@ -172,10 +180,9 @@ Inspect waveforms
       ↓
 Debug and repeat as necessary
       ↓
-Proceed to Vivado
+Proceed to Quartus
 ```
 
 QuestaSim should generally be your **first tool for compilation and
 functional debugging**. Once the design compiles and simulates
-correctly, proceed to Vivado for synthesis, implementation, and bitstream
-generation.
+correctly, follow the [Quartus tutorial]({% link software/quartus/quartus-tutorial.md %}) to compile the design and program the DE10-Lite.

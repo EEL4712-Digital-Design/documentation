@@ -5,7 +5,7 @@ nav_order: 2
 ---
 # ECE Linux Server Access
 
-This guide explains how to remotely access the UF ECE Linux servers and use the software tools required for EEL5721 Reconfigurable Computing.
+This guide explains how to remotely access the UF ECE Linux servers and use the software tools required for EEL 4712 Digital Design.
 
 ## 1. Connect to the UF Network
 
@@ -52,7 +52,7 @@ If your computer does not have an SSH client, you can also use an SSH applicatio
 
 # Graphical Access Using VNC
 
-Some course tools, including Vivado and QuestaSim, have graphical interfaces. You can access the graphical desktop of the ECE Linux server using VNC.
+Some course tools, including Quartus and QuestaSim, have graphical interfaces. You can access the graphical desktop of the ECE Linux server using VNC.
 
 ## 3. Install a VNC Viewer
 
@@ -163,17 +163,13 @@ You can then launch the tools from the terminal.
 vsim &
 ```
 
-### Vivado
-
-```bash
-vivado &
-```
-
 ### Quartus Prime Pro
 
 ```bash
 quartus &
 ```
+
+For the DE10-Lite labs, follow the [Quartus Prime Lite installation guide]({% link software/quartus/quartus-installation.md %}) to install MAX 10 device support.
 
 The `&` runs the application in the background so that you can continue using the terminal.
 
@@ -256,10 +252,10 @@ source /apps/reconfig/enable
 vsim &
 ```
 
-### Start Vivado
+### Start Quartus
 
 ```bash
-vivado &
+quartus &
 ```
 
 ### Start a VNC session

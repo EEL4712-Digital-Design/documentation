@@ -5,21 +5,21 @@ nav_order: 5
 ---
 # Best Practices and Recommendations
 
-This section summarizes the recommended workflow and setup for working with **QuestaSim** and **Vivado**.
+This section summarizes the recommended workflow and setup for working with **QuestaSim** and **Quartus**.
 
 ## File Structure
 
-Vivado and Questa may not function correctly if the file path contains spaces or special characters. To avoid problems, use only **letters, numbers, and underscores** in directory and file names.
+Quartus and Questa may not function correctly if the file path contains spaces or special characters. To avoid problems, use only **letters, numbers, and underscores** in directory and file names.
 
 A simple directory structure is recommended. For example:
 
 ```text
 C:/Users/<name>/DigitalDesign/
 ├── Lab0/
-│   ├── top_level.vhd
-│   ├── SimpleLogic.vhd
-│   ├── SimpleLogic_tb.vhd
-│   └── <Questa/Vivado-generated files and folders>
+│   ├── top_level.sv
+│   ├── SimpleLogic.sv
+│   ├── SimpleLogic_tb.sv
+│   └── <Questa/Quartus-generated files and folders>
 ├── Lab1/
 └── ...
 ```
@@ -32,7 +32,7 @@ Linux users should follow a similar structure.
 
 ## Coding Environment
 
-Although Questa and Vivado both include built-in editors, it is strongly recommended that you use an external development environment such as **Visual Studio Code (VS Code)** to write and edit your VHDL code.
+Although Questa and Quartus both include built-in editors, it is strongly recommended that you use an external development environment such as **Visual Studio Code (VS Code)** to write and edit your HDL code.
 
 A modern editor can provide useful features such as:
 
@@ -42,11 +42,13 @@ A modern editor can provide useful features such as:
 - Linting and structural checks
 - Easier management of multiple source and reference files
 
-You can still use Questa for compilation and simulation and Vivado for synthesis and implementation.
+You can still use Questa for compilation and simulation and Quartus for synthesis and implementation.
 
 ## Recommended VS Code Extensions
 
-### Modern VHDL
+### HDL language support
+
+For Lab 0, use an editor extension that supports SystemVerilog. For VHDL projects, use a VHDL extension.
 
 **Modern VHDL** is the primary recommended VS Code extension for VHDL development. It provides VHDL language support, syntax highlighting, basic syntax checking, and code-completion features.
 
@@ -67,7 +69,7 @@ For example, VS Code can be arranged so that the VHDL design file, testbench, la
 
 ## GitHub Copilot
 
-The tutorial recommends disabling GitHub Copilot while completing course assignments. In particular, AI-generated HDL code can make it more difficult to develop the VHDL design and debugging skills required for laboratory quizzes and exams.
+The tutorial recommends disabling GitHub Copilot while completing course assignments. In particular, AI-generated HDL code can make it more difficult to develop the HDL design and debugging skills required for laboratory quizzes and exams.
 
 To disable Copilot code completions in VS Code:
 
@@ -79,18 +81,18 @@ To disable Copilot code completions in VS Code:
 For a typical lab assignment, use the following workflow:
 
 1. **Save the provided lab files** in the appropriate lab directory.
-2. **Write and edit your VHDL code** in VS Code or another external editor.
+2. **Write and edit your HDL code** in VS Code or another external editor.
 3. **Compile in Questa first.** Questa provides a relatively fast way to identify most syntax and compilation problems.
 4. **Run a functional simulation in Questa.** Verify that the design behaves as expected using the provided or developed testbench.
 5. If the design does not behave correctly, **debug the design using the Questa simulation results**.
-6. Once the design compiles and simulates correctly in Questa, **synthesize it in Vivado**.
-7. Use Vivado to identify synthesis or implementation issues that may not be visible during functional simulation.
+6. Once the design compiles and simulates correctly in Questa, **synthesize it in Quartus**.
+7. Use Quartus to identify synthesis or implementation issues that may not be visible during functional simulation.
 8. Once the design is correct, generate the required bitstream and test it as instructed.
 
 A useful way to remember the workflow is:
 
 ```text
-Write/Edit VHDL
+Write/Edit HDL
       ↓
 Compile in Questa
       ↓
@@ -98,11 +100,11 @@ Functional Simulation
       ↓
 Debug if necessary
       ↓
-Synthesize/Implement in Vivado
+Synthesize/Implement in Quartus
       ↓
 Program FPGA
       ↓
 Demo
 ```
 
-The key principle is to use **Questa for fast functional development and debugging** before running the more time-consuming Vivado synthesis and implementation flow.
+The key principle is to use **Questa for fast functional development and debugging** before running the more time-consuming Quartus synthesis and implementation flow.
