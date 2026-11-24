@@ -14,7 +14,7 @@ In Lab 0, you will compile a SystemVerilog design, assign its signals to pins on
 
 <p><mark style="background-color: #ff0; color: #000;"><strong>Do not use spaces anywhere in the full Quartus project path. This includes every parent folder and the project folder itself. Use only letters, numbers, and underscores in folder names.</strong></mark></p>
 
-1. Save [SimpleLogic.sv]({% link software/rtl/SimpleLogic.sv %}) and [top_level.sv]({% link software/rtl/top_level.sv %}) in a lab folder such as `C:\Digital_Design\Lab0`.
+1. Use [SimpleLogic.sv](https://github.com/EEL4712-Digital-Design/lab0-main/blob/main/SimpleLogic.sv) and [top_level.sv](https://github.com/EEL4712-Digital-Design/lab0-main/blob/main/top_level.sv) from your Lab 0 repository. Keep them in a lab folder such as `C:\Digital_Design\Lab0`.
 2. Open Quartus Prime Lite and select **File → New Project Wizard**. Use the lab folder as the working directory, `Lab0` as the project name, and `top_level` as the top-level entity.
 3. Select **Empty project**. On **Add Files**, add both SystemVerilog files. To add them later, use **Project → Add/Remove Files in Project**. If needed, right-click `top_level.sv` in the **Files** tab of the Project Navigator and choose **Set as Top-Level Entity**.
 4. On **Family, Device & Board Settings**, open the **Board** tab, select **MAX 10 DE10 - Lite**, and clear **Create top-level design file**. The supplied wrapper connects the design to the board's switches and LEDs.

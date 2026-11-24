@@ -16,6 +16,8 @@ This site contains course documentation for EEL 4712 Digital Design at the Unive
 
 ## Software Usage
 
+The sample SystemVerilog design, testbench, and board wrapper used in these tutorials are provided in the [Lab 0 repository on GitHub](https://github.com/EEL4712-Digital-Design/lab0-main).
+
 1. Read the [Recommended Workflow]({% link best-practices/best-practices.md %}).
 2. [Simulate SystemVerilog designs using QuestaSim]({% link software/questa/questa-tutorial.md %}).
 3. [Compile a Quartus project and program the DE10-Lite]({% link software/quartus/quartus-tutorial.md %}).

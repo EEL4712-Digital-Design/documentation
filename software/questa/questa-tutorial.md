@@ -32,7 +32,7 @@ appear.
 
 ### Add the Design File
 
-Download [`SimpleLogic.sv`]({% link software/rtl/SimpleLogic.sv %}) and save it in your project directory.
+Use [`SimpleLogic.sv`](https://github.com/EEL4712-Digital-Design/lab0-main/blob/main/SimpleLogic.sv) from your Lab 0 repository. Save it in your project directory if you keep your QuestaSim project in a separate folder.
 
 1.  Click **Add Existing File**.
 2.  Browse to `SimpleLogic.sv`.
@@ -42,7 +42,7 @@ You normally do not need to select **Copy to project directory**.
 
 ### Add the Testbench
 
-Download [`SimpleLogic_tb.sv`]({% link software/rtl/SimpleLogic_tb.sv %}), save it in your project directory, and add it in the same way:
+Use [`SimpleLogic_tb.sv`](https://github.com/EEL4712-Digital-Design/lab0-main/blob/main/SimpleLogic_tb.sv) from the same repository and add it in the same way:
 
 1.  Click **Add Existing File**.
 2.  Select `SimpleLogic_tb.sv`.
