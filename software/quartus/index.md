@@ -8,5 +8,4 @@ nav_order: 2
 
 # Quartus
 
-- [Install Quartus Prime Lite and Questa FPGA Starter Edition]({% link software/quartus/quartus-installation.md %})
-- [Compile a Quartus project and program the DE10-Lite]({% link software/quartus/quartus-tutorial.md %})
+Guides for installing Quartus Prime Lite, compiling a design, and programming the DE10-Lite FPGA board.
